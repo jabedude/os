@@ -8,6 +8,7 @@
 #![feature(attr_literals)]
 #![feature(never_type)]
 #![feature(ptr_internals)]
+#![feature(pointer_methods)]
 
 extern crate pi;
 extern crate stack_vec;
@@ -20,4 +21,7 @@ pub mod shell;
 #[no_mangle]
 pub extern "C" fn kmain() {
     // FIXME: Start the shell.
+
+    shell::shell("->");
+
 }
